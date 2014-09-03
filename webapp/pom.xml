@@ -14,6 +14,12 @@
   <name>webapp Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+  
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+		<version>${springframework.version}</version>
+	</dependency>
     <!-- Servlet, JSP -->
     <dependency>
     	<groupId>com.prac</groupId>
