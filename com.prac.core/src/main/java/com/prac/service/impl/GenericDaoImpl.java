@@ -41,14 +41,13 @@ public abstract class GenericDaoImpl implements GenericDao {
 	}
 
 	@Override
-	public <T extends BaseEntity> void remove(T entity) {
+	public void remove(Object entity) {
 		entityManager.remove(entity);
 	}
 
 	@Override
-	public <T extends BaseEntity> T update(T entity, Class<T> classType) {
-		entityManager.merge(entity);
-		return entity;
+	public <T extends BaseEntity> T update(T entity) {
+		return entityManager.merge(entity);
 	}
 
 	protected EntityManager getEntityManager() {

@@ -23,7 +23,7 @@ public interface GenericDao {
 
 	<T extends BaseEntity> T insert(T entity);
 
-	<T extends BaseEntity> void remove(T entity);
+	void remove(Object entity);
 
-	<T extends BaseEntity> T update(T entity, Class<T> classType);
+	<T extends BaseEntity> T update(T entity);
 }
