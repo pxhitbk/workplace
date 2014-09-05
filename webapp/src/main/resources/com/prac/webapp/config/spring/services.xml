@@ -3,12 +3,18 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="authentication" class="com.prac.service.impl.AuthenticationServiceImpl"/>
+	<bean id="genericDao" class="com.prac.service.impl.GenericDaoImpl"/>
+	<bean id="authenticationServiceImpl" class="com.prac.service.impl.AuthenticationServiceImpl"/>
+	
+	<!-- Viet travel webapp service -->
+	<bean id="tourServiceImpl" class="com.prac.viettravel.service.impl.TourServiceImpl"/>
 	
 	<bean id="serviceResolver" factory-method="createServiceResolver" class="com.prac.util.ServiceResolver">
 		<constructor-arg>
 			<map>
-				<entry key="com.prac.service.AuthenticationService" value-ref="authentication"/>
+				<entry key="com.prac.service.GenericDao" value-ref="genericDao"></entry>
+				<entry key="com.prac.service.AuthenticationService" value-ref="authenticationServiceImpl"/>
+				<entry key="com.prac.viettravel.service.TourService" value-ref="authenticationServiceImpl"/>
 			</map>
 		</constructor-arg>
 	</bean>
