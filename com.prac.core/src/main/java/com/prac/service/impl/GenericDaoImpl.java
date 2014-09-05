@@ -17,7 +17,7 @@ import com.prac.service.GenericDao;
  * @param <T>
  */
 @Transactional
-public abstract class GenericDaoImpl implements GenericDao {
+public class GenericDaoImpl implements GenericDao {
 	@PersistenceContext(unitName = "prac-webapp")
 	private EntityManager entityManager;
 

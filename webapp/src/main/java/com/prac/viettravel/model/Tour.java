@@ -2,17 +2,30 @@ package com.prac.viettravel.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import com.prac.core.model.BaseEntity;
 
 @Entity
 @Table(name = "prac-web-tour")
-public class Tour {
+public class Tour extends BaseEntity {
+	/** */
+	private static final long serialVersionUID = -8993531971868097838L;
+
+	@Column(nullable = false)
 	private String name;
 	private long duration;
+	@Temporal(TemporalType.DATE)
 	private Date startDate;
+	@Temporal(TemporalType.DATE)
 	private Date endDate;
+	@Temporal(TemporalType.DATE)
 	private Date startBookingDate;
+	@Temporal(TemporalType.DATE)
 	private Date endBookingDate;
 	private long maxAllowedCustomer;
 	private boolean isInternational;
@@ -91,5 +104,10 @@ public class Tour {
 
 	public void setAvailable(boolean isAvailable) {
 		this.isAvailable = isAvailable;
+	}
+
+	@Override
+	public String toString() {
+		return getName();
 	}
 }
