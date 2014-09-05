@@ -7,7 +7,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "room")
+@Table(name="prac-web-room")
 public class Room {
 	private String name;
 	private int numberOfBeds;

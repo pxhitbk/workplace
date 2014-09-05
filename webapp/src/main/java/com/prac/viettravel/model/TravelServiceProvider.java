@@ -1,7 +1,11 @@
 package com.prac.viettravel.model;
 
+import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="prac-web-travelserviceprovider")
 public class TravelServiceProvider {
 	private Long providerId;
 	@OneToMany(mappedBy = "providerId")

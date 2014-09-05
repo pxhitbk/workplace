@@ -6,7 +6,7 @@ import javax.persistence.Table;
 import com.prac.core.model.BaseEntity;
 
 @Entity
-@Table(name = "booking")
+@Table(name="prac-web-booking")
 public class Booking extends BaseEntity {
 
 	/** */

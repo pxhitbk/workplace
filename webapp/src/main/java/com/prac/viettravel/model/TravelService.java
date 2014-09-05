@@ -1,10 +1,12 @@
 package com.prac.viettravel.model;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 import com.prac.core.model.BaseEntity;
 
 @Entity
+@Table(name="prac-web-travelservice")
 public class TravelService extends BaseEntity {
 
 	/** */
