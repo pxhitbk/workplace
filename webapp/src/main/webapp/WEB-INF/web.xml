@@ -9,6 +9,17 @@
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath*:com/prac/webapp/config/spring/*.xml</param-value>
     </context-param>
+    
+    <servlet>
+    	<servlet-name>prac-webapp</servlet-name>
+    	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+    	<servlet-name>prac-webapp</servlet-name>
+    	<url-pattern>/</url-pattern>
+    </servlet-mapping>
+    
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
