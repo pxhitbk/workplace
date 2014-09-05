@@ -11,7 +11,7 @@ import javax.persistence.TemporalType;
 import com.prac.core.model.BaseEntity;
 
 @Entity
-@Table(name = "prac-web-tour")
+@Table(name = "prac_web_tour")
 public class Tour extends BaseEntity {
 	/** */
 	private static final long serialVersionUID = -8993531971868097838L;

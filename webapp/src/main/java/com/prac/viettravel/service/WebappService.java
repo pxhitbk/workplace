@@ -1,5 +1,5 @@
 package com.prac.viettravel.service;
 
-public class WebappService {
-
+public interface WebappService {
+	public void createTestData();
 }

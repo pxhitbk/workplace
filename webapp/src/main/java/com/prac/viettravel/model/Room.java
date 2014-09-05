@@ -6,9 +6,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.prac.core.model.BaseEntity;
+
 @Entity
-@Table(name="prac-web-room")
-public class Room {
+@Table(name = "prac_web_room")
+public class Room extends BaseEntity {
+	/** */
+	private static final long serialVersionUID = 7280204746285726650L;
 	private String name;
 	private int numberOfBeds;
 

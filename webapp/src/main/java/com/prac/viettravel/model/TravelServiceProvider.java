@@ -1,18 +1,28 @@
 package com.prac.viettravel.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.prac.core.model.BaseEntity;
+
 @Entity
-@Table(name="prac-web-travelserviceprovider")
-public class TravelServiceProvider {
+@Table(name = "prac_web_travelserviceprovider")
+public class TravelServiceProvider extends BaseEntity {
+	/** */
+	private static final long serialVersionUID = -433049142628583980L;
+	@Column(insertable = false, updatable = false)
 	private Long providerId;
-	@OneToMany(mappedBy = "providerId")
+	@ManyToOne
+	@JoinColumn(name = "providerId")
 	private ServiceProvider provider;
 
+	@Column(insertable = false, updatable = false)
 	private Long serviceId;
-	@OneToMany(mappedBy = "serviceId")
+	@ManyToOne
+	@JoinColumn(name = "serviceId")
 	private TravelService service;
 
 	private Long quantity;

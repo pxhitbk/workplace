@@ -3,8 +3,10 @@ package com.prac.viettravel.model;
 import java.util.List;
 
 import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 
+@Entity
 @DiscriminatorValue(value = "1")
 public class RoomServiceProvider extends ServiceProvider {
 
@@ -13,7 +15,7 @@ public class RoomServiceProvider extends ServiceProvider {
 
 	private RoomServiceProviderType providerType;
 
-	@OneToMany
+	@OneToMany(mappedBy = "roomServiceProvider")
 	private List<Room> rooms;
 
 	public RoomServiceProviderType getProviderType() {

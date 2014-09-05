@@ -14,8 +14,11 @@
 			<map>
 				<entry key="com.prac.service.GenericDao" value-ref="genericDao"></entry>
 				<entry key="com.prac.service.AuthenticationService" value-ref="authenticationServiceImpl"/>
-				<entry key="com.prac.viettravel.service.TourService" value-ref="authenticationServiceImpl"/>
+				<entry key="com.prac.viettravel.service.TourService" value-ref="tourServiceImpl"/>
+				<!-- <entry key="com.prac.viettravel.service.WebappService" value-ref="webAppServiceImpl"/> -->
 			</map>
 		</constructor-arg>
 	</bean>
+	
+	<bean id="webAppServiceImpl" class="com.prac.viettravel.service.impl.WebAppServiceImpl"/>
 </beans>

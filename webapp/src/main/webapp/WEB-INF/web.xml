@@ -10,9 +10,17 @@
         <param-value>classpath*:com/prac/webapp/config/spring/*.xml</param-value>
     </context-param>
     
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    
     <servlet>
     	<servlet-name>prac-webapp</servlet-name>
     	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    	<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value></param-value>
+		</init-param>
     </servlet>
     
     <servlet-mapping>
@@ -20,10 +28,6 @@
     	<url-pattern>/</url-pattern>
     </servlet-mapping>
     
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
-	
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
