@@ -19,7 +19,7 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 	<mvc:annotation-driven/>
 	
 	<!-- Handle request for static resource -->
-	<mvc:resources location="/com/prac/webapp/content" mapping="/content/**"/>
+	<mvc:resources location="/resources/assets/" mapping="/resources/**" cache-period="3600"/> <!-- com/prac/webapp/ -->
 	
 	<context:component-scan base-package="com.prac.viettravel" />
 	

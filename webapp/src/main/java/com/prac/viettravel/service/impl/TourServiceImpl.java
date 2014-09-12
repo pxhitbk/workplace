@@ -25,8 +25,8 @@ public class TourServiceImpl implements TourService {
 		for (Tour tour : newTours) {
 			try {
 				successTour = core.insert(tour);
-				addedTours.add(tour.getId());
-				LOGGER.info("Success added tour " + successTour.getName());
+				addedTours.add(successTour.getId());
+				LOGGER.info("Success added tour " + successTour.getId() + " : " + successTour.getName());
 			} catch (Exception e) {
 				LOGGER.error("Cannot add tour " + tour.getName(), e);
 			}
